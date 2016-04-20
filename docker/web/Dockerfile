@@ -1,6 +1,7 @@
 FROM php:5.6-apache
 
 ADD conf/corsomagento.conf /etc/apache2/sites-available/corsomagento.conf
+ADD conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 ADD index.php /var/www/html/index.php
 
 ENV TERM=xterm
@@ -18,7 +19,6 @@ RUN export TERM=xterm \
     && apt-get install -y libxml2-dev \
     && apt-get install -y php5-xdebug \
     && cd /var/www \
-#    && git clone https://github.com/lucacondotta/corso-magento.git \
     && docker-php-ext-install mcrypt \
     && docker-php-ext-install gd \
     && docker-php-ext-install soap \
@@ -27,7 +27,10 @@ RUN export TERM=xterm \
     && a2enmod rewrite \
     && a2ensite 000-default \
     && a2ensite corsomagento \
-    && service apache2 restart \
-#    && chown -R www-data:www-data /var/www/corso-magento/app/etc \
-#    && chown -R www-data:www-data /var/www/corso-magento/media \
-#    && chown -R www-data:www-data /var/www/corso-magento/var
+    && service apache2 restart
+
+EXPOSE 80
+EXPOSE 443
+EXPOSE 9000
+
+VOLUME /var/www/corso-magento
