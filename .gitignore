@@ -1,1 +1,7 @@
 .idea/
+.nbproject/
+/downloader/
+/media/catalog
+app/etc/local.xml
+/var/*
+!/var/package
