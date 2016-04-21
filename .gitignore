@@ -1,7 +1,12 @@
 .idea/
 .nbproject/
 /downloader/
-/media/catalog
+/media/*
+!/media/customer/
+!/media/dhl/
+!/media/downloadable/.htaccess
+!/media/xmlconnect/
+!/media/.htaccess
 app/etc/local.xml
 /var/*
 !/var/package

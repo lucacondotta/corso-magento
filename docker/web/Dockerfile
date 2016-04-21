@@ -12,18 +12,34 @@ RUN export TERM=xterm \
     && echo "\n\nServerName localhost:80" >> /etc/apache2/apache2.conf \
     && mkdir /var/www/corso-magento \
     && apt-get update \
-    && apt-get install -y apt-utils \
-    && apt-get install -y git \
-    && apt-get install -y libmcrypt-dev \
-    && apt-get install -y libpng12-dev \
-    && apt-get install -y libxml2-dev \
-    && apt-get install -y php5-xdebug \
+    && apt-get install -y \
+                apt-utils \
+                git \
+                mysql-client \
+    # For mcrypt
+                libmcrypt-dev \
+    # For gd
+                libfreetype6-dev \
+                libpng12-dev \
+                libjpeg62-turbo-dev \
+                libxpm-dev \
+                libvpx-dev \
+    # For soap
+                libxml2-dev \
+    # Xdebug
+                php5-xdebug \
     && cd /var/www \
     && docker-php-ext-install mcrypt \
+    && docker-php-ext-configure gd \
+       		--with-freetype-dir=/usr/lib/x86_64-linux-gnu/ \
+       		--with-png-dir=/usr/lib/x86_64-linux-gnu/ \
+       		--with-jpeg-dir=/usr/lib/x86_64-linux-gnu/ \
+       		--with-xpm-dir=/usr/lib/x86_64-linux-gnu/ \
+       		--with-vpx-dir=/usr/lib/x86_64-linux-gnu/ \
     && docker-php-ext-install gd \
-    && docker-php-ext-install soap \
-    && docker-php-ext-install mbstring \
-    && docker-php-ext-install pdo_mysql \
+                              soap \
+                              mbstring \
+                              pdo_mysql \
     && a2enmod rewrite \
     && a2ensite 000-default \
     && a2ensite corsomagento \
