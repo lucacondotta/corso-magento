@@ -33,6 +33,11 @@
                 <class>MageCourse_CustomShelves_Helper</class>
             </magecourse_customshelves>
         </helpers>
+        <blocks>
+            <magecourse_customshelves_adminhtml>
+                <class>MageCourse_CustomShelves_Block_Adminhtml</class>
+            </magecourse_customshelves_adminhtml>
+        </blocks>
     </global>
     <admin>
         <routers>
@@ -46,6 +51,13 @@
         </routers>
     </admin>
     <adminhtml>
+        <layout>
+            <updates>
+                <magecourse_customshelves>
+                    <file>magecourse_customshelves.xml</file>
+                </magecourse_customshelves>
+            </updates>
+        </layout>
         <translate>
             <modules>
                 <MageCourse_CustomShelves><!-- Il nome di questo nodo è arbitrario -->

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<layout>
+    <adminhtml_customshelves_index>
+        <reference name="content">
+            <block type="magecourse_customshelves_adminhtml/shelf" name="customshelves_container"/>
+        </reference>
+    </adminhtml_customshelves_index>
+</layout>
