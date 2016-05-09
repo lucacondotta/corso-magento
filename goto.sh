@@ -15,8 +15,8 @@ if [ $CMD = "slide" ]; then
     fi
 
     git stash save -q --include-untracked "$DATE"
-    git checkout -f -q  v$TAG
-    echo 'You are now on slide '$TAG
+    git checkout -f -q  $TAG
+    echo 'You are now on slide group '$TAG
 
 elif [ $CMD = "restore" ]; then
 
