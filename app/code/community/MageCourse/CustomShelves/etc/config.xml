@@ -28,5 +28,32 @@
                 </setup>
             </magecourse_customshelves_setup>
         </resources>
+        <helpers>
+            <magecourse_customshelves>
+                <class>MageCourse_CustomShelves_Helper</class>
+            </magecourse_customshelves>
+        </helpers>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <magecourse_customshelves after="Mage_Adminhtml">MageCourse_CustomShelves_Adminhtml</magecourse_customshelves>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageCourse_CustomShelves><!-- Il nome di questo nodo è arbitrario -->
+                    <files>
+                        <default>MageCourse_CustomShelves.csv</default>
+                    </files>
+                </MageCourse_CustomShelves>
+            </modules>
+        </translate>
+    </adminhtml>
 </config>

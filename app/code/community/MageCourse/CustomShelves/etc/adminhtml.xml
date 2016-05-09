@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <magecourse_customshelves translate="title" module="magecourse_customshelves"><!-- modules attribute here actually refers to helper, not to module name -->
+            <title>Custom shelves</title>
+            <sort_order>80</sort_order>
+            <children>
+                <list translate="title" module="magecourse_customshelves"><!-- modules attribute here actually refers to helper, not to module name -->
+                    <title>List</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/customshelves</action>
+                </list>
+            </children>
+        </magecourse_customshelves>
+    </menu>
+</config>
