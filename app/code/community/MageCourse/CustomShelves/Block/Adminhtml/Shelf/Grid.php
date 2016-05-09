@@ -28,10 +28,10 @@ class MageCourse_CustomShelves_Block_Adminhtml_Shelf_Grid extends Mage_Adminhtml
 
     protected function _prepareColumns()
     {
-        $this->addColumn('entity_id', array(
+        $this->addColumn('id', array(
             'header' => $this->_getHelper()->__('ID'),
             'type' => 'number',
-            'index' => 'entity_id',
+            'index' => 'id',
             'filter' => false
         ));
 

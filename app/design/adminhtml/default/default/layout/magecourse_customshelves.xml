@@ -5,4 +5,13 @@
             <block type="magecourse_customshelves_adminhtml/shelf" name="customshelves_container"/>
         </reference>
     </adminhtml_customshelves_index>
+
+    <adminhtml_customshelves_edit>
+        <reference name="left">
+            <block type="magecourse_customshelves_adminhtml/shelf_edit_tabs"/>
+        </reference>
+        <reference name="content">
+            <block type="magecourse_customshelves_adminhtml/shelf_edit"/>
+        </reference>
+    </adminhtml_customshelves_edit>
 </layout>
