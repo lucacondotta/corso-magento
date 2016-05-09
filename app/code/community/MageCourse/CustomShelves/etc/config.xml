@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageCourse_CustomShelves>
+            <version>1.0.0</version>
+        </MageCourse_CustomShelves>
+    </modules>
+    <global>
+        <models>
+            <magecourse_customshelves>
+                <class>MageCourse_CustomShelves_Model</class>
+                <resourceModel>magecourse_customshelves_resource</resourceModel>
+            </magecourse_customshelves>
+            <magecourse_customshelves_resource>
+                <class>MageCourse_CustomShelves_Model_Resource</class>
+                <entities>
+                    <shelf>
+                        <table>magecourse_customshelves_shelf</table>
+                    </shelf>
+                </entities>
+            </magecourse_customshelves_resource>
+        </models>
+        <resources>
+            <magecourse_customshelves_setup>
+                <setup>
+                    <module>MageCourse_CustomShelves</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </magecourse_customshelves_setup>
+        </resources>
+    </global>
+</config>
