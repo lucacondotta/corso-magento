@@ -2,7 +2,7 @@
 <config>
     <modules>
         <MageCourse_CustomShelves>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </MageCourse_CustomShelves>
     </modules>
     <global>
@@ -17,6 +17,9 @@
                     <shelf>
                         <table>magecourse_customshelves_shelf</table>
                     </shelf>
+                    <shelf_product>
+                        <table>magecourse_customshelves_shelf_product</table>
+                    </shelf_product>
                 </entities>
             </magecourse_customshelves_resource>
         </models>

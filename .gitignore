@@ -11,3 +11,4 @@ app/etc/local.xml
 /var/*
 !/var/package
 .phpstorm.meta.php
+debug.php
