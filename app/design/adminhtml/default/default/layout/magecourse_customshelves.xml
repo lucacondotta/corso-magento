@@ -14,4 +14,29 @@
             <block type="magecourse_customshelves_adminhtml/shelf_edit"/>
         </reference>
     </adminhtml_customshelves_edit>
+
+    <adminhtml_customshelves_products>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="magecourse_customshelves_adminhtml/shelf_edit_tabs_products" name="customshelves.edit.tab.products"/>
+            <block type="adminhtml/widget_grid_serializer" name="shelf_edit_tabs_products_grid_serializer">
+                <reference name="shelf_edit_tabs_products_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>customshelves.edit.tab.products</grid_block_name>
+                        <data_callback>getSelectedProducts</data_callback>
+                        <hidden_input_name>add_product</hidden_input_name>
+                        <reload_param_name>products_selected</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>order</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_customshelves_products>
+
+    <adminhtml_customshelves_products_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="magecourse_customshelves_adminhtml/shelf_edit_tabs_products" name="customshelves.edit.tab.products"/>
+        </block>
+    </adminhtml_customshelves_products_grid>
 </layout>

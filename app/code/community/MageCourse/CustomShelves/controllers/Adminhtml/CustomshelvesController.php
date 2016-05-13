@@ -49,6 +49,10 @@ class MageCourse_CustomShelves_Adminhtml_CustomshelvesController extends Mage_Ad
 
                 $shelf->addData($data);
 
+                if ($addProduct = $this->getRequest()->getPost('add_product')) {
+                    $shelf->setAddProductData(Mage::helper('adminhtml/js')->decodeGridSerializedInput($addProduct));
+                }
+
                 $shelf->save();
 
                 $this->_getSession()->addSuccess($this->__('Custom shelf has been saved'));
@@ -60,5 +64,29 @@ class MageCourse_CustomShelves_Adminhtml_CustomshelvesController extends Mage_Ad
             }
         }
         return $this->_redirect('*/customshelves/edit', array('_current' => true));
+    }
+
+    public function productsAction()
+    {
+        $this->_initShelf();
+
+        $this->loadLayout();
+
+        $this->getLayout()->getBlock('customshelves.edit.tab.products')
+            ->setSelectedProducts($this->getRequest()->getPost('selected_products', null));
+
+        $this->renderLayout();
+    }
+
+    public function products_gridAction()
+    {
+        $this->_initShelf();
+
+        $this->loadLayout();
+
+        $this->getLayout()->getBlock('customshelves.edit.tab.products')
+            ->setSelectedProducts($this->getRequest()->getPost('selected_products', null));
+
+        $this->renderLayout();
     }
 }
