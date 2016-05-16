@@ -1,0 +1,12 @@
+/* Block: Custom Shelf */
+
+.catalog-product-view .box-custom-shelf {margin-top: 30px}
+.catalog-product-view .box-custom-shelf h2 { border-bottom:0; padding:0; margin:0 0 8px; }
+.catalog-product-view .box-custom-shelf .products-grid { width:100%; }
+.catalog-product-view .box-custom-shelf .products-grid td { width:20%; padding:15px 10px 12px; line-height:1.6em; }
+.catalog-product-view .box-custom-shelf .products-grid tr.last td { border-bottom:0; }
+.catalog-product-view .box-custom-shelf .products-grid td.last { border-right:0; }
+.catalog-product-view .box-custom-shelf .products-grid td img { border:1px solid #cccccc; }
+.catalog-product-view .box-custom-shelf .products-grid .product-image { text-align:center; }
+.catalog-product-view .box-custom-shelf .products-grid td.empty { border-right:0; }
+.catalog-product-view .box-custom-shelf .products-grid .ratings .rating-box { float:none; display:block; margin:0 0 3px; }

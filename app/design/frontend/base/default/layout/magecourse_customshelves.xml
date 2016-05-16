@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<layout>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>magecourse/customshelves/styles.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="core/text_list" name="product.shelf">
+                <block type="magecourse_customshelves/product_list_customshelf" name="product_custom_shelf" template="magecourse/customshelves/catalog/product/list/customshelf.phtml">
+                    <action method="setColumnCount">
+                        <columns>5</columns>
+                    </action>
+                    <action method="setItemLimit">
+                        <itemLimit>5</itemLimit>
+                    </action>
+                </block>
+            </block>
+        </reference>
+    </catalog_product_view>
+</layout>

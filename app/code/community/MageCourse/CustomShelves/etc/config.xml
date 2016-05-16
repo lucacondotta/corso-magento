@@ -40,6 +40,9 @@
             <magecourse_customshelves_adminhtml>
                 <class>MageCourse_CustomShelves_Block_Adminhtml</class>
             </magecourse_customshelves_adminhtml>
+            <magecourse_customshelves>
+                <class>MageCourse_CustomShelves_Block</class>
+            </magecourse_customshelves>
         </blocks>
     </global>
     <admin>
@@ -71,4 +74,13 @@
             </modules>
         </translate>
     </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <magecourse_customshelves>
+                    <file>magecourse_customshelves.xml</file>
+                </magecourse_customshelves>
+            </updates>
+        </layout>
+    </frontend>
 </config>
